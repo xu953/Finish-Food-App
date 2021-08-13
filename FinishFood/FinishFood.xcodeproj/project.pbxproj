@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC2174F926C0716C000000F0 /* Fridge_food.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2174F826C0716C000000F0 /* Fridge_food.swift */; };
+		EC2174FB26C08681000000F0 /* Other_food.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2174FA26C08681000000F0 /* Other_food.swift */; };
 		EC89995226B74F2B00E1DD86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC89995126B74F2B00E1DD86 /* AppDelegate.swift */; };
 		EC89995426B74F2B00E1DD86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC89995326B74F2B00E1DD86 /* SceneDelegate.swift */; };
 		EC89995626B74F2B00E1DD86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC89995526B74F2B00E1DD86 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC2174F826C0716C000000F0 /* Fridge_food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fridge_food.swift; sourceTree = "<group>"; };
+		EC2174FA26C08681000000F0 /* Other_food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other_food.swift; sourceTree = "<group>"; };
 		EC89994E26B74F2B00E1DD86 /* FinishFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinishFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC89995126B74F2B00E1DD86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC89995326B74F2B00E1DD86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 				EC89995326B74F2B00E1DD86 /* SceneDelegate.swift */,
 				EC89995526B74F2B00E1DD86 /* ViewController.swift */,
 				EC9D74C226BF0B55004C5062 /* Frozen_food.swift */,
+				EC2174F826C0716C000000F0 /* Fridge_food.swift */,
+				EC2174FA26C08681000000F0 /* Other_food.swift */,
 				EC89996726B791AF00E1DD86 /* Page_what2eat.swift */,
 				EC89995726B74F2B00E1DD86 /* Main.storyboard */,
 				EC89995A26B74F2F00E1DD86 /* Assets.xcassets */,
@@ -145,8 +151,10 @@
 			files = (
 				EC89995626B74F2B00E1DD86 /* ViewController.swift in Sources */,
 				EC89995226B74F2B00E1DD86 /* AppDelegate.swift in Sources */,
+				EC2174F926C0716C000000F0 /* Fridge_food.swift in Sources */,
 				EC89996826B791AF00E1DD86 /* Page_what2eat.swift in Sources */,
 				EC9D74C326BF0B55004C5062 /* Frozen_food.swift in Sources */,
+				EC2174FB26C08681000000F0 /* Other_food.swift in Sources */,
 				EC89995426B74F2B00E1DD86 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  Frozen_food.swift
+//  Other_food.swift
 //  FinishFood
 //
 //  Created by Zhenyu Xu on 8/7/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Frozen_food: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class Other_food: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var table: UITableView!
     
@@ -16,7 +16,7 @@ class Frozen_food: UIViewController, UITableViewDelegate, UITableViewDataSource 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.data = UserDefaults.standard.stringArray(forKey: "frozen_items") ?? []
+        self.data = UserDefaults.standard.stringArray(forKey: "other_items") ?? []
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         table.delegate = self
         table.dataSource = self
@@ -42,14 +42,14 @@ class Frozen_food: UIViewController, UITableViewDelegate, UITableViewDataSource 
         if editingStyle == .delete {
             tableView.beginUpdates()
             self.data.remove(at: indexPath.row)
-            UserDefaults.standard.setValue(self.data, forKey:"frozen_items")
+            UserDefaults.standard.setValue(self.data, forKey:"other_items")
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
         }
     }
     
     @IBAction func didTapAddButton(){
-        let alert = UIAlertController(title: "New Item", message: "Add frozen food", preferredStyle: .alert)
+        let alert = UIAlertController(title: "New Item", message: "Add other food", preferredStyle: .alert)
         alert.addTextField { field in
             field.placeholder = "Enter item name and today's date"
         }
@@ -58,11 +58,11 @@ class Frozen_food: UIViewController, UITableViewDelegate, UITableViewDataSource 
             if let field = alert.textFields?.first{
                 if let text = field.text, !text.isEmpty{
                     DispatchQueue.main.async{
-                        //var currentItems = UserDefaults.standard.stringArray(forKey: "frozen_items") ?? []
+                        //var currentItems = UserDefaults.standard.stringArray(forKey: "other_items") ?? []
                         //currentItems.append(text)
                         self.data.append(text)
                         self.table.reloadData()
-                        UserDefaults.standard.setValue(self.data, forKey:"frozen_items")
+                        UserDefaults.standard.setValue(self.data, forKey:"other_items")
                     }
                 }
             }
@@ -73,4 +73,5 @@ class Frozen_food: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     
 }
+
 
