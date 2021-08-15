@@ -10,18 +10,19 @@ import UIKit
 class Frozen_food: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var table: UITableView!
-    
+    // Create a variable to store entered information
     var data = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Use UserDefaults to store the items
         self.data = UserDefaults.standard.stringArray(forKey: "frozen_items") ?? []
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         table.delegate = self
         table.dataSource = self
     }
     
+    // Functions for the tableview to perform actions in the table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
@@ -48,6 +49,7 @@ class Frozen_food: UIViewController, UITableViewDelegate, UITableViewDataSource 
         }
     }
     
+    // Use alert pop up window to allow user adding new items
     @IBAction func didTapAddButton(){
         let alert = UIAlertController(title: "New Item", message: "Add frozen food", preferredStyle: .alert)
         alert.addTextField { field in

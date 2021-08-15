@@ -35,10 +35,12 @@ class Page_what2eat: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // Send the data via Bluetooth to a display
     @IBAction func SendValue(_ sender: Any) {
         writeOutgoingValue(data: display.text!)
     }
     
+    // Randomly generate an item from MyStorage's three sections
     @IBAction func RandomFrozenFood(_ sender: Any) {
         let frozen_items = UserDefaults.standard.stringArray(forKey: "frozen_items") ?? []
         if frozen_items.isEmpty{
@@ -71,7 +73,8 @@ class Page_what2eat: UIViewController {
       centralManager?.scanForPeripherals(withServices: [CBUUIDs.BLEService_UUID])
     }
     
-    
+    // Bluetooth set up, retrieved from Adafruit
+    // From https://learn.adafruit.com/build-a-bluetooth-app-using-swift-5/code
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral,advertisementData: [String : Any], rssi RSSI: NSNumber) {
 
         bluefruitPeripheral = peripheral
